@@ -1,3 +1,0 @@
-upload files from a folder 'endor' to web server or local server to test.
-
-Important!   Contact form   and "ajax page transitions"  works  only on a  server local  or host.

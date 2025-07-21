@@ -1,4 +1,4 @@
- function initEndor() {
+ function initAllEars() {
     "use strict";
     // preload------------------
 	firstLoad();
@@ -718,12 +718,12 @@ if (null === trueMobile) {
     });
     //   Init All Functions------------------
     function readyFunctions() {
-        initEndor();
+        initAllEars();
     }
 }
 if (trueMobile) {
     $(document).ready(function () {
-        initEndor();
+        initAllEars();
     });
 }
 document.addEventListener('gesturestart', function (e) {
