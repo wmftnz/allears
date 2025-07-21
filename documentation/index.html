@@ -1,0 +1,479 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Endor Photography - Creative  Responsive Photography  Portfolio</title>
+	
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#DE6325;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+		<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushCss.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script src="js/shBrushPhp.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start - Files</a></li>
+ 
+			<li><a href="#nav">Navigation</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#icons">Icons</a></li>
+			<li><a href="#port">Portfolio</a></li>
+			<li><a href="#contact_form">Contact form</a></li>
+			<li><a href="#share">Share</a></li>
+			<li><a href="#ajax">Ajax page transitions </a></li>
+			<li><a href="#sources_credits">Sources & Credits</a></li>
+			<li><a href="#update">Updates</a></li>
+			<li><a href="#thanks">Thanks</a></li>
+
+		</ol>
+	</div>
+	<div id="documenter_content">
+	
+	
+	
+	<section id="documenter_cover"><h1>Endor</h1><h2>  Creative  Responsive Photography  Portfolio</h2><hr><ul><li>Created: 18/07/2021</li><li>latest Update: 18/07/2021</li><li>By: KWST</li><li><a href="http://themeforest.net/user/kwst"></a></li><li>Email: <a href="mailto:support@kwst.net">support@kwst.net</a></li></ul>
+	<p>Thanks for purchasing tempalte and for supporting my work. Endor  - Creative  Responsive Photography  Portfolio. This documentation will not teach you HTML & CSS, it's just showcase of custom elements used in template.  </p> <br>
+	<p><strong style="color:red"> Very important !</strong> In order to work php scripts (contact form)  , ajax   page transitions - your site files must reside on the local  or host server.</p>
+<br><br><h3>Files</h3><hr class="notop"><br>
+<p>All site files are divided into folders:<br><br>
+<strong>css folder</strong> - css files that are responsible for the style themes.<br>
+<strong>js folder</strong> - javascript files.<br>
+<strong>php folder</strong> - php files.<br>
+<strong>images folder</strong> - folder that contains all images.<br>
+<strong>fonts folder</strong> - folder that contains  fonts plugin "Font-Awesome".<br>
+ 
+</p>
+
+
+</section>
+<div class="clerfix"></div>
+ 
+
+
+	
+
+<section id="nav">
+<h3>Navigation   </h3><hr class="notop">
+ 
+<p>Navigation structure:   </p>
+ <pre class="brush: html">
+             <!--  navigation -->
+            <div class="nav-holder main-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="ajax">Works</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="ajax">About</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="ajax">News</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="ajax">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- navigation  end -->  
+</pre>
+
+ 
+ 
+ 
+
+<h3>Dropdown menu</h3><hr class="notop">
+ 
+<p>This menu also supports a dropdown menu. Example:  </p>
+ <pre class="brush: html">
+             <!--  navigation -->
+            <div class="nav-holder main-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="ajax">Works</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="ajax">About</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="ajax">News</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="ajax">Contacts</a>
+                        </li>
+                            <li>
+                                <a href="#">Second level </a>
+                                <!--second level -->
+                                <ul>
+                                    <li><a href="#">Some Page</a></li>
+                                    <li><a href="#">Some Page</a></li>
+                                    <li><a href="#">Some Page</a></li>
+                                    <li><a href="#">Some Page</a></li>
+ 
+                                    <li>
+                                        <a href="#">third  level</a>
+                                        <!--third  level -->
+                                        <ul>
+											<li><a href="#">Some Page</a></li>
+											<li><a href="#">Some Page</a></li>
+											<li><a href="#">Some Page</a></li>
+											<li><a href="#">Some Page</a></li>
+                                        </ul>
+                                        <!--third level end-->
+                                    </li>
+                                </ul>
+                                <!--second level end-->
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- navigation  end -->  
+</pre>
+
+ </section>	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+<section id="images">	
+<h3>Images</h3><hr class="notop">
+<p>All images are in the folder "images".<br>       
+</p>
+<br>
+<h3>How to add and change the background image</h3>
+
+<p>To change the background you can simply change the path in the style rendered in html code, for example : </p>
+<pre class="brush: html">
+ 
+<div class="bg"  data-bg="images/bg/1.jpg"></div>
+	
+</pre>
+ 
+
+  
+</section>
+
+<section id="icons">
+	<h3>Icons</h3><hr class="notop">
+<p>	All  icons are generated by the plugin <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">"Font-Awesome"</a>. List of all the icons can be found <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">here</a>. 
+<br>
+To change the icon, you have to copy and paste the code icon at the right place for you. Icons size-five . Read the documentation plugin - it is described in detail how to change the icons size.
+
+</p>
+<p>For example: </p>
+<pre class="brush: html">
+
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                            </ul>
+
+</pre>
+
+<p>&nbsp;
+	</p>
+</section>
+
+<section id="port">
+<h3>Portfolio</h3><hr class="notop">
+
+ 
+<p>Filters portfolio - To filter worked - class links in the code must conform to the class of the filter element, for example: </p>  
+ 
+<pre class="brush: html">
+                                <div class="gallery-filters">
+									<a href="#" class="gallery-filter  gallery-filter-active" data-filter="*"><span>01.</span>All Albums</a>
+									<a href="#" class="gallery-filter" data-filter=".nature"><span>02.</span>Nature</a>
+									<a href="#" class="gallery-filter" data-filter=".models"><span>03.</span>Models</a>
+									<a href="#" class="gallery-filter" data-filter=".couples"><span>04.</span>Couples</a>
+									<a href="#" class="gallery-filter" data-filter=".outdoor"><span>05.</span>Outdoor</a>
+
+                                </div>
+
+</pre>
+<pre class="brush: html">
+                                    <!-- gallery-item -->
+                                    <div class="gallery-item nature">
+                                        <div class="hov_box">
+                                            <img src="images/folio/1.jpg" alt="">
+                                            <div class="overlay"></div>
+                                            <div class="hov_box-title">
+                                                <a href="portfolio-single.html" class="ajax">Alone on Nature.</a>
+                                                <div class="cat_item">Nature</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- gallery-item end-->
+
+
+
+
+</pre>
+ <p>In this case, when you click on the link with the class "nature" will be displayed elements with class "nature"</p> 
+  
+ 
+ </section>
+ 
+
+<section id="contact_form">
+	<h3>Contact Form</h3><hr class="notop">
+<p>
+Find the file "contact_me" in the folder <strong>php</strong> . In this file, find the line <strong style="color:red">$to_Email = "myemail@gmail.com";</strong> and add you e-mail.</p> 
+<p>How to forward mail to your mailbox ask your Hosting Service Provider. Because providers use different control panel site and I find it hard to predict what you use. Server side script for sending emails is in "contact_me.php" . Ajax submit is initialized in "scripts.js" file.</p>
+<p>&nbsp;
+	</p>
+	
+<pre class="brush: js">
+	// contact form ------------------
+    $("#contactform").submit(function() {
+        var a = $(this).attr("action");
+        $("#message").slideUp(750, function() {
+            $("#message").hide();
+            $("#submit").attr("disabled", "disabled");
+            $.post(a, {
+                name: $("#name").val(),
+                email: $("#email").val(),
+                comments: $("#comments").val()
+            }, function(a) {
+                document.getElementById("message").innerHTML = a;
+                $("#message").slideDown("slow");
+                $("#submit").removeAttr("disabled");
+                if (null != a.match("success")) $("#contactform").slideDown("slow");
+            });
+        });
+        return false;
+    });
+    $("#contactform input, #contactform textarea").keyup(function() {
+        $("#message").slideUp(1500);
+    });
+
+</pre>
+</section>
+
+
+
+ 
+ 
+
+
+<section id="share">
+<h3>Share your pages</h3><hr class="notop">
+<p>To configure the plugin  in file scriptys.js  find line :</p>
+<pre class="brush: js"> 		
+     // Share   ------------------
+     $(".share-container").share({
+         networks: ['facebook', 'pinterest', 'googleplus', 'twitter', 'linkedin']
+     });
+</pre>
+<p>You can simply add a comma in line: <strong>social: 'facebook','pinterest','googleplus','twitter','linkedin' 'foursquare' , 'flickr', 'digg' , 'tumblr'</strong>  separated names of social networks . </p>
+</section>
+ 
+ 
+<section id="ajax">
+<h3>Ajax</h3><hr class="notop">
+
+<p>To dynamically loaded content - you can simply add a link class "ajax". For example: </p>
+<pre class="brush: html">
+
+<a href="portfolio-single2.html" class="ajax">Portfolio </a>
+
+
+</pre>
+<p>Accordingly to the content page was loaded as usual, this class must be removed</p><br>
+<h3>Disable ajax</h3>
+<p>To disable Ajax  throughout the template - open file scripts.js  find</p>
+<pre class="brush: js">
+var a = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return a.Android() || a.BlackBerry() || a.iOS() || a.Opera() || a.Windows();
+    }
+};
+trueMobile = a.any();
+if (null === trueMobile) {
+    //   Init Ajax------------------
+    $(function () {
+        $.coretemp({
+            reloadbox: "#wrapper",
+            outDuration: 1200,
+            inDuration: 100
+        });
+        readyFunctions();
+        $(document).on({
+            ksctbCallback: function () {
+                readyFunctions();
+            }
+        });
+    });
+    //   Init All Functions------------------
+    function readyFunctions() {
+        initEndor();
+    }
+
+}
+if (trueMobile) {
+    $(document).ready(function () {
+        initEndor();
+    });
+}
+ 
+</pre>
+<p>And the change it  on this code :</p>
+<pre class="brush: js">
+
+$(document).ready(function() {
+	initEndor();
+});
+</pre>
+<p>In order to remove the Ajax request in separate links  - just remove class "ajax" . For example  :</p>
+<pre class="brush: html">
+
+<a href="about.html">About </a>
+
+
+</pre>
+
+ 
+
+</section>	
+
+ 
+ 
+ 
+ 
+
+<section id="sources_credits">
+	<h3>Sources & Credits</h3><hr class="notop">
+<p>
+	<strong>Fonts</strong><br>
+	http://www.google.com/fonts<br>
+	<br><br>
+	
+	
+	<strong>Images</strong><br>
+	Shutterstock<br>
+	http://www.shutterstock.com/
+	<br><br>
+ 
+ 	
+	</p>
+
+<p>
+	<strong>Icons</strong><br>
+		Font-Awesome<br>
+	http://fortawesome.github.io/Font-Awesome/</p>
+
+
+
+<p>
+<strong>Javascripts </strong><br><br>
+
+	<strong>JQuery</strong><br>
+	http://jquery.com</p>
+<p>
+	<strong>JQuery Easing</strong><br>
+	http://gsgd.co.uk/sandbox/jquery/easing/</p>
+<p>
+	<strong>Swiper</strong><br>
+	http://idangero.us/swiper/</p>
+ 
+
+	<p>
+	<strong>isotope</strong><br>
+	http://isotope.metafizzy.co/</p>
+ 	
+	
+		<p>
+	<strong> Lightgallery</strong><br>
+	http://sachinchoolur.github.io/lightGallery/</p>	
+	
+ 
+	
+</section>
+ 
+
+
+<section id="update">
+<h3>Updates</h3><hr class="notop">
+
+
+ 
+
+ 
+ 
+ 
+
+ 
+
+
+ </section>	
+<section id="thanks">
+	<h3>Thanks</h3><hr class="notop">
+<p>
+	Thanks for purchasing template and for supporting my work. If we fail here in this documentation, please e-mail me  <a href="mailto:support@kwst.net">support@kwst.net</a>. If you have a spare time, please go and rate my template. I will apreciate that.</p>
+<p>
+	Thanks</p>
+</section>
+
+	</div>
+</body>
+</html>
