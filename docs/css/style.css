@@ -2689,3 +2689,10 @@ blockquote p {
 		background-position: center;
 	}
 } 
+.fabform-spam-protection, .fabform-spam-protection * {
+	color: #222 !important;
+	background: #fff !important;
+	border: 1px solid #ccc !important;
+	padding: 1em !important;
+	z-index: 9999 !important;
+  }
