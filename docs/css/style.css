@@ -2692,8 +2692,90 @@ blockquote p {
 /* force recaptcha frame to stay on top */
 iframe[src*="recaptcha"] {
 	display: block !important;
-	opacity: 1 !important;
+	margin: 20px auto !important;
+}
+
+/* Fabform Spam Protection Styling Fixes */
+.container {
+	background: #fff !important;
+	color: #333 !important;
+	padding: 40px 20px !important;
+	border-radius: 8px !important;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+	margin: 20px auto !important;
+	max-width: 600px !important;
+}
+
+.container h1 {
+	color: #333 !important;
+	font-size: 28px !important;
+	margin-bottom: 20px !important;
+	font-weight: 600 !important;
+}
+
+.container p {
+	color: #666 !important;
+	font-size: 16px !important;
+	line-height: 1.6 !important;
+	margin-bottom: 30px !important;
+}
+
+.g-recaptcha {
+	display: block !important;
+	margin: 20px 0 !important;
+	transform: scale(1) !important;
+	transform-origin: 0 0 !important;
+}
+
+/* Make sure the reCAPTCHA iframe is visible */
+iframe[src*="google.com/recaptcha"] {
+	display: block !important;
 	visibility: visible !important;
-	z-index: 99999 !important;
-	position: relative !important;
+	opacity: 1 !important;
+}
+
+/* Style the backlink section */
+.row.backlink {
+	margin-top: 30px !important;
+	padding-top: 20px !important;
+	border-top: 1px solid #eee !important;
+}
+
+.row.backlink p {
+	color: #999 !important;
+	font-size: 14px !important;
+	margin: 0 !important;
+}
+
+.row.backlink a {
+	color: #007bff !important;
+	text-decoration: none !important;
+}
+
+.row.backlink a:hover {
+	text-decoration: underline !important;
+}
+
+/* Additional reCAPTCHA visibility fixes */
+.g-recaptcha > div {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.g-recaptcha iframe {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	border: none !important;
+}
+
+/* Ensure the form is properly styled */
+#target {
+	display: block !important;
+	margin: 20px 0 !important;
+}
+
+#target input[type="hidden"] {
+	display: none !important;
 }
