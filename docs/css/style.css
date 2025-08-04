@@ -2689,10 +2689,11 @@ blockquote p {
 		background-position: center;
 	}
 } 
-.fabform-spam-protection, .fabform-spam-protection * {
-	color: #222 !important;
-	background: #fff !important;
-	border: 1px solid #ccc !important;
-	padding: 1em !important;
-	z-index: 9999 !important;
-  }
+/* force recaptcha frame to stay on top */
+iframe[src*="recaptcha"] {
+	display: block !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	z-index: 99999 !important;
+	position: relative !important;
+}
