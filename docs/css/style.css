@@ -2705,11 +2705,20 @@ iframe[src*="google.com/recaptcha"] {
 	z-index: 99999 !important;
 }
 
+iframe[src*="recaptcha"] {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	z-index: 99999 !important;
+}
+
 .g-recaptcha {
 	display: block !important;
 	margin: 20px 0 !important;
 	transform: scale(1) !important;
 	transform-origin: 0 0 !important;
+	visibility: visible !important;
+	opacity: 1 !important;
 }
 
 .g-recaptcha > div {
@@ -2725,6 +2734,20 @@ iframe[src*="google.com/recaptcha"] {
 	border: none !important;
 }
 
+/* Target all reCAPTCHA related elements */
+div[data-sitekey] {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+div[data-sitekey] iframe {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	z-index: 99999 !important;
+}
+
 /* Fabform specific form styling */
 #target {
 	display: block !important;
@@ -2733,4 +2756,23 @@ iframe[src*="google.com/recaptcha"] {
 
 #target input[type="hidden"] {
 	display: none !important;
+}
+
+/* Force reCAPTCHA to be visible */
+iframe[src*="api.js"] {
+	display: none !important;
+}
+
+iframe[src*="recaptcha/api2/anchor"] {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	z-index: 99999 !important;
+}
+
+iframe[src*="recaptcha/api2/bframe"] {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	z-index: 99999 !important;
 }
