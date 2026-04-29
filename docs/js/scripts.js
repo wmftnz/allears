@@ -557,6 +557,16 @@ function initpageloadAnimation() {
             });
         }, 80 * ac2);
     });
+    $(".gallery-item img").each(function () {
+        var img = $(this);
+        if (this.complete) {
+            img.addClass("img-loaded");
+        } else {
+            img.on("load", function () {
+                img.addClass("img-loaded");
+            });
+        }
+    });
     $(".progress-bar-wrap").addClass("pbw_vis");
     setTimeout(function () {
         $(".page-scroll-nav li a").each(function (ac3) {
