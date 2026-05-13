@@ -177,17 +177,25 @@
 			wrapScreenwidht = portfolio.width(),
 			wrapwidth = portfolio.width(),
 			listwidth = portfolio.find('.gallery-items').width();
+		var pendingMouseEvent = null;
+		var rafScheduled = false;
 		portfolio.on('mousemove', function (e) {
-			var dP = ((e.pageY / wrapHeight));
-			var dP2 = ((e.pageX / wrapwidth));
-			TweenMax.to(portfolio, 2.9, {
-				scrollTop: ((listHeight * dP) - wrapScreenHeight / 2),
-				force3D: true,
-			});
-			TweenMax.to(portfolio, 2.9, {
-				scrollLeft: ((listwidth * dP2) - wrapScreenwidht / 2),
-				force3D: true,
-			});
+			pendingMouseEvent = e;
+			if (!rafScheduled) {
+				rafScheduled = true;
+				requestAnimationFrame(function () {
+					if (pendingMouseEvent) {
+						var dP = pendingMouseEvent.pageY / wrapHeight;
+						var dP2 = pendingMouseEvent.pageX / wrapwidth;
+						TweenMax.to(portfolio, 2.9, {
+							scrollTop: (listHeight * dP) - (wrapScreenHeight / 2),
+							scrollLeft: (listwidth * dP2) - (wrapScreenwidht / 2),
+							force3D: true,
+						});
+					}
+					rafScheduled = false;
+				});
+			}
 		});
     }
     nc();
