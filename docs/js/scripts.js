@@ -187,7 +187,7 @@
 					if (pendingMouseEvent) {
 						var dP = pendingMouseEvent.pageY / wrapHeight;
 						var dP2 = pendingMouseEvent.pageX / wrapwidth;
-						TweenMax.to(portfolio, 2.9, {
+						TweenMax.to(portfolio, 4.0, {
 							scrollTop: (listHeight * dP) - (wrapScreenHeight / 2),
 							scrollLeft: (listwidth * dP2) - (wrapScreenwidht / 2),
 							force3D: true,
