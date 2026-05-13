@@ -858,6 +858,7 @@ blockquote p {
 	position: relative;
 	width: 25% ;
 	padding: 20px 20px 0 0;
+	contain: layout style paint;
 }
 .hov_box {
 	position: relative;
@@ -865,6 +866,7 @@ blockquote p {
 	opacity: 0;
 	transform: scale(0.94);
 	background: #111;
+	will-change: transform, opacity;
 }
 .gallery-item img {
     float: left;
@@ -873,7 +875,7 @@ blockquote p {
     position: relative;
     z-index: 1;
     transform: translateZ(0);
-    transition: transform 2000ms cubic-bezier(.19,1,.22,1) 0ms, opacity 0.6s ease-in-out;
+    transition: transform 600ms cubic-bezier(.19,1,.22,1) 0ms, opacity 0.6s ease-in-out;
     opacity: 0;
 }
 .gallery-item img.img-loaded {
