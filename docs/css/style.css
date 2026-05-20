@@ -21,6 +21,13 @@ body {
 	background: #000;
 	font-family: 'Poppins', sans-serif;
 }
+.column-wrapper_text a {
+	color: #fff;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.column-wrapper_text a:hover {
+	border-bottom-color: #fff;
+}
 @-o-viewport {
 	width: device-width;
 }
