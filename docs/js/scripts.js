@@ -170,30 +170,40 @@
         });
         var b = $(".gallery-item").length;
         $(".all-album , .num-album").html(b);
-		var portfolio = $('.hero-showcase'),
-			wrapScreenHeight = portfolio.height(),
-			wrapHeight = portfolio.height(),
-			listHeight = portfolio.find('.gallery-items').height(),
-			wrapScreenwidht = portfolio.width(),
-			wrapwidth = portfolio.width(),
-			listwidth = portfolio.find('.gallery-items').width();
+		var portfolio = $('.hero-showcase');
 		var pendingMouseEvent = null;
 		var rafScheduled = false;
+		// cursor position inside this fraction of the showcase edge pins the grid to its
+		// top/bottom (or left/right) edge, so the first row is reachable without pushing
+		// the mouse right to the top of the page
+		var edgeBand = 0.15;
+		// >1 gives the upper part of the grid more of the mouse travel
+		var topBias = 1.35;
+		function bandPos(pos, size, bias) {
+			if (!size) return 0;
+			var t = ((pos / size) - edgeBand) / (1 - (edgeBand * 2));
+			t = Math.max(0, Math.min(1, t));
+			return bias ? Math.pow(t, bias) : t;
+		}
 		portfolio.on('mousemove', function (e) {
 			pendingMouseEvent = e;
 			if (!rafScheduled) {
 				rafScheduled = true;
 				requestAnimationFrame(function () {
-					if (pendingMouseEvent) {
-						var dP = pendingMouseEvent.pageY / wrapHeight;
-						var dP2 = pendingMouseEvent.pageX / wrapwidth;
-						TweenMax.to(portfolio, 4.0, {
-							scrollTop: (listHeight * dP) - (wrapScreenHeight / 2),
-							scrollLeft: (listwidth * dP2) - (wrapScreenwidht / 2),
-							force3D: true,
-						});
-					}
 					rafScheduled = false;
+					if (!pendingMouseEvent) return;
+					// measured every frame so late-loading images and resizes stay correct
+					var el = portfolio[0];
+					if (!el) return;
+					var rect = el.getBoundingClientRect();
+					var maxTop = el.scrollHeight - el.clientHeight;
+					var maxLeft = el.scrollWidth - el.clientWidth;
+					if (maxTop <= 0 && maxLeft <= 0) return;
+					TweenMax.to(portfolio, 1.5, {
+						scrollTop: maxTop * bandPos(pendingMouseEvent.clientY - rect.top, rect.height, topBias),
+						scrollLeft: maxLeft * bandPos(pendingMouseEvent.clientX - rect.left, rect.width, 0),
+						force3D: true,
+					});
 				});
 			}
 		});
@@ -502,7 +512,7 @@
 }
 function initpageloadAnimation() {
     TweenMax.to($('.hero-showcase'), 0.1, {
-        scrollTop: 450,
+        scrollTop: 60,
         scrollLeft: 350,
         force3D: true
     });
