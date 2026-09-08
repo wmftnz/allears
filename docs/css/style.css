@@ -2790,3 +2790,21 @@ iframe[src*="recaptcha/api2/bframe"] {
 	opacity: 1 !important;
 	z-index: 99999 !important;
 }
+/* ------------------------------------------------------------------
+   Accessibility: restore keyboard focus visibility.
+   plugins.css:11 sets a global `:focus { outline: 0 }`, which removed
+   the focus ring from every link and button on the site. style.css is
+   loaded after plugins.css, so this wins. :focus-visible keeps the
+   ring off for mouse clicks and on for keyboard navigation.
+   ------------------------------------------------------------------ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible,
+.nav-button:focus-visible,
+.to-top-btn:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
