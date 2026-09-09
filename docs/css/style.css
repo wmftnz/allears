@@ -2808,3 +2808,65 @@ select:focus-visible,
 	outline: 2px solid #fff;
 	outline-offset: 3px;
 }
+
+/* ------------------------------------------------------------------
+   Product cards (hire rate grids).
+   Previously each card image carried an inline `max-width:220px`,
+   which ignores the container: .services-item has 40px side padding,
+   so on a 4-up row the content box is ~164px and every image spilled
+   out past the card edge. Card heights also varied with copy length.
+
+   The image is now capped by the card, not by a fixed pixel width,
+   sits in a fixed-height media box so every product occupies the same
+   vertical space, and the cards stretch to a common height per row.
+   ------------------------------------------------------------------ */
+.product-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.product-row::before,
+.product-row::after {
+	display: none;
+}
+.product-row > [class*="col-"] {
+	float: none;
+	display: flex;
+	margin-bottom: 30px;
+}
+.product-row .product-card {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 34px 24px 30px;
+}
+.product-media {
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 22px;
+}
+.product-media img {
+	display: block;
+	margin: 0;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 150px;
+}
+/* Description takes the slack so the cards bottom out together. */
+.product-card > p:last-child {
+	flex: 1 0 auto;
+	margin-bottom: 0;
+}
+/* Bootstrap only assigns col-md-* widths at >=992px. Without these the
+   flex items would collapse to content width below that. */
+@media (max-width: 991px) {
+	.product-row > [class*="col-"] { width: 50%; }
+}
+@media (max-width: 600px) {
+	.product-row > [class*="col-"] { width: 100%; }
+	.product-media { height: 130px; }
+	.product-media img { max-height: 130px; }
+}
