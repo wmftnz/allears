@@ -143,49 +143,33 @@ alone rather than guessed at.
 
 ## Not applied, needs your call
 
-### Facts I could not verify
-- `TODO(will:)` **hello@allears.nz vs will@allears.nz.** The brief says
-  will@; the site uses hello@ in 121 places, consistently, including
-  the Google-facing JSON-LD. Left alone deliberately. Switching the
-  public contact address on a live site is a business decision and if
-  hello@ is the monitored inbox, changing it loses enquiries. Say the
-  word and it is a one-line sweep.
-- `TODO(will:)` **Geo coordinates in the JSON-LD** are -43.532,
-  172.636, which is the central city, not Sydenham. Needs the real
-  lat/long for 20 Southwark Street.
-- `TODO(will:)` **Opening hours** Mon-Fri 9am-4pm appear in schema and
-  the NAP on every page but were not in the brief.
-- `TODO(will:)` **The XDJ-RX2 is $160/unit while the CDJ-3000 flagship
-  is $140/unit.** Looks like an inverted or stale rate.
-- `TODO(will:)` **The new RX3 is priced per weekend while every other
-  item on that page is per unit.** Priced as you specified, but the
-  page now mixes two hire periods in one row.
+### Facts, confirmed by Will 2026-09-09 — RESOLVED
+- **hello@allears.nz is correct.** It is the enquiries address. No
+  change needed; the 121 occurrences stay.
+- **Office hours are 9am to 5pm**, not 4pm. Corrected in the visible
+  NAP on every page and in the schema. APPLIED
+- **Geo coordinates are right.** The business is central city. No
+  change.
+- **terms.html "Unit 20"** removed; the address is just 20 Southwark
+  Street. APPLIED
+- **Uplights are $40+GST per light**, up from $30. APPLIED
+- **The XDJ-RX3 is per unit**, not per weekend. APPLIED
+- **XDJ-RX2 at $160 vs CDJ-3000 at $140** stands as is. Will has
+  confirmed the site pricing is correct as published.
 
-### Prices that disagree with the crew equipment register
-The site and the register do not match on six items. Site first:
-uplight $30 / register $25, Astera pack $300 / $250, Thunder P60 $70 /
-$60, festoon 15m $30 / $45, fairy lights $15 / $20, festoon pole $12 /
-$12.50. The festoon one is the concerning direction: the site charges
-$15 less than the register. `TODO(will: reconcile)`
+### Prices vs the crew equipment register — CLOSED
+Six site prices differ from the register (uplight, Astera pack,
+Thunder P60, festoon 15m, fairy lights, festoon poles). Will has
+confirmed the site pricing is intentional and stays as published. The
+uplight was the one deliberate change, to $40. No further action.
 
-### Safety and load claims
-These are on rigging and staging pages and carry real liability. All
-left exactly as they are on the visible page; several were removed
-from the JSON-LD where they had never been visible at all.
-- `TODO(will:)` "rated for hanging speakers, lighting fixtures, LED
-  screens" with no figure or series cited.
-- `TODO(will:)` "our crew are trained for working at height".
-- `TODO(will:)` "we work with structural engineers to ensure
-  compliance".
-- `TODO(will:)` "Ground-supported truss totems and smaller rigs
-  usually don't need engineering sign-off" — this is safety advice to
-  the public.
-- `TODO(will:)` "For simple ground-supported rigs under standard load
-  limits" — "standard load limits" is not defined anywhere.
-- `TODO(will:)` The LED screen page says "No scaffolding, no truss, no
-  structural engineer" for a 4m x 2.5m outdoor screen. Wind loading.
-- `TODO(will:)` Is the truss genuinely Eurotruss F34? It is asserted in
-  the title, schema and every alt tag.
+### Safety and load claims — CLOSED
+All rigging, staging and LED screen claims reviewed with Will and kept
+as published. Listed here only so they are on the record:
+load ratings on truss, crew trained for working at height, structural
+engineer involvement, ground-supported rigs not needing sign-off,
+"standard load limits", the LED screen needing no engineer, and the
+Eurotruss F34 series. No change made to any visible page.
 
 ### Claims that read as invented
 - `TODO(will:)` Client names: Summit Touring, Offline Collective, Dine
@@ -211,8 +195,9 @@ from the JSON-LD where they had never been visible at all.
   on the site.
 - `TODO(will:)` Venue names in blog posts I could not verify:
   "Trevenna", "The Atrium".
-- `TODO(will:)` Astera model. The register says AX1 tubes; the page
-  keywords target "Astera Titan Tube". Different products.
+- Astera model: RESOLVED. The only "Titan" reference was in the
+  keywords meta, which is now removed site-wide. The page names the
+  product generically, so nothing contradicts the register.
 - `TODO(will:)` LED screen "runs off a standard 15A supply".
 
 ### Inventory contradictions
@@ -225,8 +210,9 @@ from the JSON-LD where they had never been visible at all.
   generate quote requests you cannot fill.
 - `TODO(will:)` Two product images are byte-identical and shown as
   different products (the 1.6m and 2m DJ tables).
-- `TODO(will:)` staging schema listed a 0.5m x 1m deck with no price
-  card and no image.
+- Staging deck sizes: RESOLVED. The schema and the What's Included
+  list both now name only the 2m x 1m and 1m x 1m decks that are
+  actually sold.
 
 ### Structural, deliberately not done
 - **28 MB of unreferenced assets.** `docs/events/full-res/` (18 MB) is
@@ -274,8 +260,7 @@ from the JSON-LD where they had never been visible at all.
   and nothing else. No nav or footer entry.
 - **sitemap lastmod is stale** on most entries (May/June, against real
   edits through August). Either update on deploy or drop lastmod.
-- `TODO(will:)` terms.html says "Unit 20, 20 Southwark Street", which
-  no other page says. Also: no bond clause, no PPSA clause, no privacy
+- terms.html "Unit 20" is fixed. Still open: no bond clause, no PPSA clause, no privacy
   policy page despite clause 15.2, and the 50% deposit in 5.1 vs the
   30% late-cancellation fee in 8.1 do not say whether they stack.
 
