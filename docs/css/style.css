@@ -437,6 +437,17 @@ blockquote p {
 .hero-section {
 	margin-bottom: 150px;
 }
+/* taller hero with a shallower bottom fade, so the photo isn't squashed into a thin band */
+.hero-section_tall .hero-section_bg {
+	padding: clamp(180px, 26vw, 330px) 0;
+}
+.hero-section_tall .hero-section_bg:before {
+	height: 14%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+.hero-section_tall .overlay {
+	opacity: 0.25;
+}
 .hero-section_title h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
