@@ -439,7 +439,7 @@ blockquote p {
 }
 /* taller hero with a shallower bottom fade, so the photo isn't squashed into a thin band */
 .hero-section_tall .hero-section_bg {
-	padding: clamp(180px, 26vw, 330px) 0;
+	padding: clamp(180px, 20vw, 255px) 0;
 }
 .hero-section_tall .hero-section_bg:before {
 	height: 14%;
