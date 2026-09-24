@@ -175,10 +175,14 @@
 		var rafScheduled = false;
 		// cursor position inside this fraction of the showcase edge pins the grid to its
 		// top/bottom (or left/right) edge, so the first row is reachable without pushing
-		// the mouse right to the top of the page
-		var edgeBand = 0.15;
+		// the mouse right to the top of the page. Smaller = the grid's full travel is
+		// spread over more mouse movement, so the pan feels less sensitive.
+		var edgeBand = 0.05;
 		// >1 gives the upper part of the grid more of the mouse travel
 		var topBias = 1.35;
+		// seconds the grid takes to ease to the position the cursor is asking for.
+		// Longer = slower, softer follow.
+		var followDuration = 3.0;
 		function bandPos(pos, size, bias) {
 			if (!size) return 0;
 			var t = ((pos / size) - edgeBand) / (1 - (edgeBand * 2));
@@ -199,7 +203,7 @@
 					var maxTop = el.scrollHeight - el.clientHeight;
 					var maxLeft = el.scrollWidth - el.clientWidth;
 					if (maxTop <= 0 && maxLeft <= 0) return;
-					TweenMax.to(portfolio, 1.5, {
+					TweenMax.to(portfolio, followDuration, {
 						scrollTop: maxTop * bandPos(pendingMouseEvent.clientY - rect.top, rect.height, topBias),
 						scrollLeft: maxLeft * bandPos(pendingMouseEvent.clientX - rect.left, rect.width, 0),
 						force3D: true,
